@@ -14,9 +14,18 @@ describe('anagrams') do
     expect(("bury").anagrams()).to(eq(["b","r","u","y"]))
 
   end
-  # it(" finds if two strings are anagrams") do #doesnt matter english explination
-  #   expect(("bury" , "ruby").anagrams()).to(eq("These words are anagrams."))
+  it(" splits a string into an array with each letter, downcases it and sorts it alaphabetically") do #doesnt matter english explination
+    expect(("bURy").anagrams()).to(eq(["b","r","u","y"]))
+
+  end
+
+  # it("checks it two strings are both equal to the same array") do #doesnt matter english explination
+  #   expect(("ruby").anagrams()).to(eq(["b","r","u","y"]))
   #
   # end
+  # it('finds if two strings are anagrams") do #doesnt matter english explination') do
+  #   expect("bury".anagrams("ruby")).to(eq("winner"))
+  #
+  #
   # end
 end
