@@ -18,32 +18,21 @@ class String
 
   elsif sorted_letters == sorted_second
     "These words are anagrams."
+  else
+    "These words have no letter matches and are antigrams." # but not necesairly antigrams
+  end
+
+  end
+
+  define_method (:antigrams?) do |second|
+    antigrams_array = []
+    second.split('').each do |letter|
+      antigrams_array.push(self.include?(letter))
+    end
+        !(antigrams_array.include?(true))
+        "These words have no letter matches and are antigrams."
+  end
+
+
+
 end
-#
-#   define_method(:palindromes?) do |second|
-#     letters_array = self.downcase.split("")
-#     second_array = second.downcase.split("")
-#     sorted_second = second_array.sort
-#     second_array_reversed = second_array.reverse
-#     if((letters_array) == (second_array_reversed))
-#       "These words are palindromes."
-#   end
-# end
-end
-end
-#
-# define_method (:antigrams?) do
-# end
-
-
-
-
-
-# if letters_array.scan(/[aeiouy]/).count == 0
-#   "You need to input actual words!"
-# define_method (:count_vowels)(str)
-# letters_array.scan(/[aeouiy]/).count
-#
-#   vowels = ["a", "e", "i", "o", "u", "y"]
-#   letters_array.each do |letter|
-#

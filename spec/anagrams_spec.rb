@@ -7,7 +7,7 @@ describe('anagrams') do
     expect('ccc'.word?()).to(eq("You need to input actual words!"))
   end
   it("checks if two strings are anagrams regardless of case") do
-    expect('ruby'.anagrams?('bruy')).to(eq("These words are anagrams."))
+    expect('ruby'.anagrams?('brUy')).to(eq("These words are anagrams."))
   end
   it("checks if two strings are palindromes") do
     expect('hannah'.anagrams?('hannah')).to(eq("These words are anagrams and palindromes."))
@@ -15,11 +15,11 @@ describe('anagrams') do
   it("removes non letters from the string") do
     expect('123hello'.anagrams?('ellho')).to(eq("These words are anagrams."))
   end
-end
 
-# it("if a phrase isnt an anagram, the program checks if it is an antigram") do
-#   expect('hi'.palindromes?('bye')).to(eq("These words have no letter matches and are antigrams."))
-# end
+  it("if a phrase isnt an anagram, the program checks if it is an antigram") do
+    expect('hi'.antigrams?('bye')).to(eq("These words have no letter matches and are antigrams."))
+  end
+end
 
 
 
