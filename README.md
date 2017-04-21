@@ -8,8 +8,6 @@
 This program will compare two words and see if they are anagrams. It will also see if they are antigrams, remove non letters, and it will also check if the two strings are palindromes.
 
 
-
-
 ## Specifications
 
 *  This program will check if the submitted text is a word

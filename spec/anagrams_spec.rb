@@ -4,7 +4,7 @@ require('anagrams') #requires lib file that is .rb
 describe('anagrams') do
 
   it("checks if the string is an actual word") do
-    expect('ccc'.word?()).to(eq("You need to input actual words!"))
+    expect('ccc'.anagrams?('ddd')).to(eq("You need to input actual words!"))
   end
   it("checks if two strings are anagrams regardless of case") do
     expect('ruby'.anagrams?('brUy')).to(eq("These words are anagrams."))
@@ -16,9 +16,9 @@ describe('anagrams') do
     expect('123hello'.anagrams?('ellho')).to(eq("These words are anagrams."))
   end
 
-  it("if a phrase isnt an anagram, the program checks if it is an antigram") do
-    expect('hi'.antigrams?('bye')).to(eq("These words have no letter matches and are antigrams."))
-  end
+  # it("if a phrase isnt an anagram, the program checks if it is an antigram") do
+  #   expect('hi'.antigrams?('bye')).to(eq("These words have no letter matches and are antigrams."))
+  # end
 end
 
 
