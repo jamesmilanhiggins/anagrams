@@ -3,13 +3,17 @@ require('anagrams') #requires lib file that is .rb
 
 describe('anagrams') do
 
+  it("checks if the string is an actual word") do
+    expect('ccc'.word?()).to(eq("You need to input actual words!"))
+  end
   it("checks if two strings are both equal to the same downcased alaphabetized string") do
     expect('ruby'.anagrams?('bruy')).to(eq("These words are anagrams."))
   end
   it("checks if two strings are palindromes") do
     expect('hannah'.palindromes?('hannah')).to(eq("These words are palindromes."))
   end
-end
+  end
+
 
 
 

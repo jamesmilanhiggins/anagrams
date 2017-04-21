@@ -5,7 +5,7 @@
 #### By James Higgins
 
 ## Description
-This proram will compare two words and see if they are anagrams. It will also see if they are antigrams. It will also check if they are palindromes.
+This program will compare two words and see if they are anagrams. It will also see if they are antigrams. It will also check if they are palindromes.
 
 
 
@@ -18,11 +18,11 @@ This proram will compare two words and see if they are anagrams. It will also se
 
 *  This program will compare two words and see if they are anagrams
   * **Example Input**:ruby and bury
-  * **Example Output**:true
+  * **Example Output**:true;  "These words are anagrams."
 
 *  If the words are anagrams, the program will check if they are palindromes
-  * **Example Input**:ruby and bury
-  * **Example Output**:false
+  * **Example Input**:hannah and hannah
+  * **Example Output**:false; "These words are palindromes."
 
 *
 

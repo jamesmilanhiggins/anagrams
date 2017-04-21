@@ -1,19 +1,22 @@
 class String
-  define_method(:anagrams?) do |second|
 
+  define_method(:word?) do
+    vowell_count = self.scan(/[aeiouy]/).count
+    if vowell_count == 0
+      "You need to input actual words!"
+    end
+  end
+  define_method(:anagrams?) do |second|
   letters_array = self.downcase.split("")
   sorted_letters = letters_array.sort
   second_array = second.downcase.split("")
   sorted_second = second_array.sort         #need to refactor
-
   if ((sorted_letters) == (sorted_second))
   "These words are anagrams."
-
   end
 end
 
-
-  define_method (:palindromes?) do |second|
+  define_method(:palindromes?) do |second|
     letters_array = self.downcase.split("")
     second_array = second.downcase.split("")
     sorted_second = second_array.sort
@@ -23,3 +26,17 @@ end
   end
 end
 end
+
+
+
+
+
+
+# if letters_array.scan(/[aeiouy]/).count == 0
+#   "You need to input actual words!"
+# define_method (:count_vowels)(str)
+# letters_array.scan(/[aeouiy]/).count
+#
+#   vowels = ["a", "e", "i", "o", "u", "y"]
+#   letters_array.each do |letter|
+#
