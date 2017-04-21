@@ -37,7 +37,7 @@ This program will compare two words and see if they are anagrams. It will also s
 
 ## Known Bugs
 
-There are no known bugs at this time
+The antigrams feature does not yet support characters with same letters
 
 ## Support and contact details
 

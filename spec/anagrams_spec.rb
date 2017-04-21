@@ -1,25 +1,33 @@
 require('rspec')
-require('anagrams') #requires lib file that is .rb
+require('anagrams')
 
 describe('anagrams') do
 
   it("checks if the string is an actual word") do
     expect('ccc'.anagrams?('ddd')).to(eq("You need to input actual words!"))
   end
+
+  it("checks if two strings are anagrams") do
+    expect('ruby'.anagrams?('bruy')).to(eq("These words are anagrams."))
+  end
+
   it("checks if two strings are anagrams regardless of case") do
     expect('ruby'.anagrams?('brUy')).to(eq("These words are anagrams."))
   end
-  it("checks if two strings are palindromes") do
+
+  it("if they are anagrams, it checks if two strings are palindromes") do
     expect('hannah'.anagrams?('hannah')).to(eq("These words are anagrams and palindromes."))
   end
+
   it("removes non letters from the string") do
     expect('123hello'.anagrams?('ellho')).to(eq("These words are anagrams."))
   end
 
-  # it("if a phrase isnt an anagram, the program checks if it is an antigram") do
-  #   expect('hi'.antigrams?('bye')).to(eq("These words have no letter matches and are antigrams."))
-  # end
+  it("if a phrase isnt an anagram, the program checks if it is an antigram") do
+    expect('hi'.anagrams?('bye')).to(eq("These words have no letter matches and are antigrams."))
+  end
 end
+
 
 
 
