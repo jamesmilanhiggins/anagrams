@@ -10,10 +10,10 @@ describe('anagrams') do
     expect('ruby'.anagrams?('bruy')).to(eq("These words are anagrams."))
   end
   it("checks if two strings are palindromes") do
-    expect('hannah'.palindromes?('hannah')).to(eq("These words are palindromes."))
+    expect('hannah'.anagrams?('hannah')).to(eq("These words are anagrams and palindromes."))
   end
-  it("removes non numbers from the string") do
-    expect('123hi'.anagrams?('ih')).to(eq("These words are anagrams."))
+  it("removes non letters from the string") do
+    expect('123hello'.anagrams?('ellho')).to(eq("These words are anagrams."))
   end
 end
 
