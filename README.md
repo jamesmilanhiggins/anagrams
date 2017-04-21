@@ -8,7 +8,7 @@
 This proram will compare two words and see if they are anagrams. It will also see if they are antigrams. It will also check if they are palindromes.
 
 
-[Link to live site]()
+
 
 ## Specifications
 
